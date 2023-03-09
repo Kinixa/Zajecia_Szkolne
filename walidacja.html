@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div> Uczeń:</div><br>
+    <div>
+    <form>
+        Imie bądź nazwisko: <input type="text" id="imienazw">*<br>
+        e-mail: <input type="email" id="mail">*<br>
+        Ocena: <input type="number" id="ocena" min="1" max="6">*<br>
+        Data: <input type="datetime-local" id="data">*<br>
+        <button onclick="walidacja()">wyślij</button>
+        <button onclick="">reset</button>
+
+     </form>   
+    </div>
+
+    <div>Uwaga!<br>Pola oznaczone * są obowiązkowe</div>
+
+    <script>
+        function walidacja(){
+            if(document.getElementById("imienazw").value==""){
+                alert("Brak wpisanego pola z imieniem badz nazwiskiem")
+            }
+            if(document.getElementById("mail").value==""){
+                alert("Brak wpisanego pola z     emailem")
+
+            }
+            if(document.getElementById("ocena").value==""){
+                alert("Brak wpisanego pola z imieniem badz nazwiskiem")
+            }
+            if(document.getElementById("data").value==""){
+                alert("Brak wpisanego pola z data")
+            }
+
+        }
+
+
+
+    </script>
+</body>
+</html>
