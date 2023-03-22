@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nawigacja</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        navigator.geolocation.getCurrentPosition(showPosition);
+        function showPosition(position){
+            console.log ("Szerokość: " + position.coords.latitude);
+            console.log ("Długość: " + position.coords.longitude);
+            
+          var link = `https://www.google.pl/maps/@${position.coords.latitude},${position.coords.longitude},21z`;
+          document.write("Szerokość: " + position.coords.latitude)
+          document.write("<br>Długość: " +position.coords.longitude)
+
+          document.write(`<br><a href=${link}>maps</a>`);
+        }
+        
+
+
+        
+    
+ </script>
+
+
+    
+
+</body>
+</html>
